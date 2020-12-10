@@ -1,0 +1,147 @@
+body {
+    font-size:130%;
+  }
+  input[type=button]{
+    background-color: rgba(54, 125, 167, 0.877);
+    font-size:20px;
+    border: none;
+    color: white;
+    float:right;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  input[type=number]{
+    font-size:20px;
+  }
+ 
+  input[type="radio"]{
+    height:20px;
+      width:20px;
+  }
+  
+
+  
+  td, th {    
+    text-align: center;
+    padding: 8px;
+  }
+  input[type="text"]{
+  width: 80%;
+  }
+  
+  
+
+  .tab {
+    overflow: hidden;
+    background-color: rgba(114, 159, 185, 0.733);
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 24px;
+    color: white;
+  }
+  
+  /* Change background color of buttons on hover */
+  
+  /* Create an active/current tablink class */
+  
+  
+  /* Style the tab content */
+  .maindiv {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    margin: 0px 50px 0px 50px;
+  }
+
+  #punnettable1 td, #punnettable1 th{ 
+    border: 1.5px solid #444242;
+  }
+
+  #punnettable2 td, #punnettable2 th{ 
+    border: 1.5px solid #444242;
+  }
+
+  #punnettable3 td, #punnettable3 th{ 
+    border: 1.5px solid #444242;
+  }
+
+  #breedingSetup_2{
+    display:none;
+  }
+  video {
+    position: relative;
+    left: 50%;
+    transform:translateX(-50%);
+}
+#chisquared{
+  display:none;
+}
+
+
+.pheno1{
+  margin: 0, auto;
+  
+}
+ #pheno2{
+  margin: 0, auto;
+
+ }
+
+#sum1{
+  display:none;
+}
+
+#chisq{
+  display:none;
+}
+#crossF_cap{
+  text-align: center;
+}
+
+#crossM_cap{
+  text-align: center;
+}
+
+#crossF{
+  position: absolute;
+  top: 200px;
+  left : 200px;
+  }
+
+  #crossM{
+    position: absolute;
+    top: 200px;
+    left : 650px;
+    }
+
+    #cross{
+      position: absolute;
+      top: 250px;
+      left : 550px;
+      }
+#summarydiv2{
+  position: absolute;
+  top: 400px;
+}
+
+#EnterPredGenType{
+  font-size: 22px;
+  left: 100px;
+  width: 150px;
+  height: 50px;
+}
+#Double{
+  display:none;
+}
