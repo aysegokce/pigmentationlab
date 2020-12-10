@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Zebrafish Virtual Lab</title>
+  <link rel="stylesheet" type="text/css" href="css/pigmentation.css">
+  <script src = "https://d3js.org/d3.v4.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+</head>
+<body>
+
+<h1>Zebrafish Virtual Lab - Pigmentation</h1>
+
+<div class="tab" >
+   <button class="tablinks" id="singletab">Monohybrit</button>
+   <button class="tablinks" id="Doubletab">Dihybrit</button>
+  
+  
+</div>
+
+<div id = "Home" style = "margin:0px 50px 0px 50px">
+  <p><h2>Introduction to mitfa roy and casper</h2>
+   More information and figures     
+   
+   
+   Here we have a fish with AB phenotype with unknown mitfa genotype ( mitfa +/?). We want to setup crosses to find the genotype of the fish. 
+  </p>  
+  
+  <input type ="button" id="button_Home" value="Start with breeding setup"  class = "actionbutton" onclick="startsingle(1)">
+
+</div>
+
+<div id="SingleMainDiv" class="maindiv">
+
+    <h2>Punnett Square for possible breeding setups</h2>
+
+    <table id="punnettable1">
+    
+    <tr>
+    <th ></th>
+      <th>AB</th>
+      <th>mitfa +/-</th>
+        <th >mitfa -/-</th>
+      </tr>
+    
+    
+    <tr>
+    <th>AB</th>
+    <td>
+    <table>
+      <tr>
+      <th colspan = "2" rowspan = "2"></th>
+      
+        <th colspan = "2">	&#9794; mitfa +/+</th>
+      </tr>
+      
+      <tr>
+      <th>mitfa +</th>
+      <th>mitfa +</th>
+      </tr>
+      
+      <tr>
+        <th rowspan = "2">	&#9792; mitfa +/+</th>
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      <tr>
+        
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      
+     
+    </table>
+    <br>
+    Expected Phenotype ratio (i.e. 0.25):
+    <br>
+    
+    <table>
+    <tr>
+    <th>Wild type</th>
+    <th>Nacre</th>
+    </tr>
+     <tr>
+    <td><input type= "text"></td>
+    <td><input type= "text"></td>
+        
+      </tr>
+      
+    </table>
+    </td>
+    
+    <td>
+    <table>
+      <tr>
+      <th colspan = "2" rowspan = "2"></th>
+      
+        <th colspan = "2">	&#9794; mitfa +/-</th>
+      </tr>
+      
+      <tr>
+      <th>mitfa +</th>
+      <th>mitfa -</th>
+      </tr>
+      
+      <tr>
+        <th rowspan = "2">	&#9792; mitfa +/+</th>
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      <tr>
+        
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      
+     
+    </table>
+    <br>
+    Expected Phenotype ratio (i.e. 0.25):
+    <br>
+    
+    <table>
+    <tr>
+    <th>Wild type</th>
+    <th>Nacre</th>
+    </tr>
+     <tr>
+    <td><input type= "text"></td>
+    <td><input type= "text"></td>
+        
+      </tr>
+      
+    </table>
+    </td>
+    
+    
+    <td>
+    <table>
+      <tr>
+      <th colspan = "2" rowspan = "2"></th>
+        <th colspan = "2">	&#9794; mitfa -/-</th>
+      </tr>
+      
+      <tr>
+      <th>mitfa -</th>
+      <th>mitfa -</th>
+      </tr>
+      
+      <tr>
+        <th rowspan = "2">	&#9792; mitfa +/-</th>
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      <tr>
+        
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      
+     
+    </table>
+    <br>
+    Expected Phenotype ratio (i.e. 0.25):
+    <br>
+    
+    <table>
+    <tr>
+    <th>Wild type</th>
+    <th>Nacre</th>
+    </tr>
+     <tr>
+    <td><input type= "text"></td>
+    <td><input type= "text"></td>
+        
+      </tr>
+      
+    </table>
+    </td>
+     </tr>
+    <tr>
+    <th>mitfa +/-</th>
+    <td>
+    <table>
+      <tr>
+      <th colspan = "2" rowspan = "2"></th>  
+        <th colspan = "2">	&#9794; mitfa +/+</th>
+      </tr>
+      
+      <tr>
+      <th>mitfa +</th>
+      <th>mitfa +</th>
+      </tr>
+      
+      <tr>
+        <th rowspan = "2">	&#9792; mitfa +/-</th>
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      <tr>
+        
+         <th>mitfa -</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      
+     
+    </table>
+    <br>
+    Expected Phenotype ratio (i.e. 0.25):
+    <br>
+    
+    <table>
+    <tr>
+    <th>Wild type</th>
+    <th>Nacre</th>
+    </tr>
+     <tr>
+    <td><input type= "text"></td>
+    <td><input type= "text"></td>
+        
+      </tr>
+      
+    </table>
+    </td>
+    
+    <td>
+    <table>
+      <tr>
+      <th colspan = "2" rowspan = "2"></th>
+      <th colspan = "2">	&#9794; mitfa +/-</th>
+      </tr>
+      
+      <tr>
+      <th>mitfa +</th>
+      <th>mitfa -</th>
+      </tr>
+      
+      <tr>
+        <th rowspan = "2">	&#9792; mitfa +/-</th>
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      <tr>
+        
+         <th>mitfa -</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      
+     
+    </table>
+    <br>
+    Expected Phenotype ratio (i.e. 0.25):
+    <br>
+    
+    <table>
+    <tr>
+    <th>Wild type</th>
+    <th>Nacre</th>
+    </tr>
+     <tr>
+    <td><input type= "text"></td>
+    <td><input type= "text"></td>
+        
+      </tr>
+      
+    </table>
+    </td>
+    
+    
+    <td>
+    <table>
+      <tr>
+      <th colspan = "2" rowspan = "2"></th>
+        <th colspan = "2">	&#9794; mitfa -/-</th>
+      </tr>
+      
+      <tr>
+      <th>mitfa -</th>
+      <th>mitfa -</th>
+      </tr>
+      
+      <tr>
+        <th rowspan = "2">	&#9792; mitfa +/-</th>
+         <th>mitfa +</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      <tr>
+        
+         <th>mitfa -</th>
+         <td><input type= "text"></td>
+         <td><input type= "text"></td>
+        
+      </tr>
+      
+     
+    </table>
+    <br>
+    Expected Phenotype ratio (i.e. 0.25):
+    <br>
+    
+    <table>
+    <tr>
+    <th>Wild type</th>
+    <th>Nacre</th>
+    </tr>
+     <tr>
+    <td><input type= "text"></td>
+    <td><input type= "text"></td>
+        
+      </tr>
+      
+    </table>
+    </td>
+    </tr>
+    
+    </table>   
+    
+    <input type="button" value = "Proceed to Breeding Setup" onclick="startsingle(2)">
+
+</div>
+
+<div id = "breedingSetup" class="maindiv">
+    <h2>Select the most prominent fish for genotyping: </h2>
+    <table style="width: 80%">
+        <tr>
+            <th>Female</th>
+            <th>Male</th>
+        </tr>
+        <tr>
+            <td rowspan="3">
+                <figure>
+                    <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
+                <figcaption style="text-align: center;">mitfa +/?</figcaption>
+                  </figure> 
+                 </td>
+                 <td style="height:150px">
+                    <input type = radio name="male" id="male1" value = "male_a">
+                      <label for= male1> 
+                        <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
+                        <br>
+                    mitfa +/+
+                      </label>
+                    </td> 
+                </tr>
+                <tr>
+                    <td style="height:150px">
+                        <input type = radio name="male" id="male1" value = "male_b">
+                          <label for= male1> <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
+                            <br>
+                        mitfa +/- </label>
+                        </td> 
+                </tr>
+                <tr>
+                    <td style="height:150px">
+                        <input type = radio name="male" id="male1" value = "male_c">
+                          <label for= male1> <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
+                            <br>
+                        mitfa -/- </label>
+                        </td> 
+                </tr>
+        </tr>
+    </table>
+    <input type="button" value="Setup the cross" onclick="SingleBreeding()">
+
+</div>
+<div id= "breedingSetup_2" class="maindiv">
+    We prepared a breeding setup with mitfa +/? with mitfa -/- (nacre) fish.
+    <br>
+    <br>
+    <div>        
+    <video width="50%" controls>
+        <source src="https://drive.google.com/uc?id=100oyZJxlX3z2ibojUHJ7p3c8BYG6ts2S" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>    
+    </div>   
+<div>
+    <input type= "button" id="Startsingle3" value = "Proceed to phenotyping" onclick="startsingle(3)">
+</div>
+      
+</div>
+
+<div id="phenotyping" class="maindiv">
+    
+    <p id="numberofemb"></p>
+                <div class= "pheno1" width="50%">
+                <img id= "phenotypeimg1" src="https://drive.google.com/uc?id=11C9IZKwW58vMzDkTkHZ1t36r-Uyb0xe7" width = "50%">
+                
+                </div>
+            
+                <div id= "pheno2" width = "40%">
+            
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Pigmented</th>
+                        <th>Not Pigmented</th>
+                    </tr>
+                    <tr>
+                        <th>Figure 1</th>
+                        <td><input type= "text"></td>
+                       <td><input type= "text"></td>
+                    </tr>
+                    <tr>
+                        <th>Figure 2</th>
+                        <td><input type= "text"></td>
+                       <td><input type= "text"></td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <td><input type= "text"></td>
+                       <td><input type= "text"></td>
+                    </tr>
+                </table>
+<input type="button" id="imgchnage" value="Next Image" onclick="changeimg()"> 
+<input type = "button" id="chisq" onclick="startsingle(4)" value = "Chi-square Test"> 
+            </div> 
+    
+        
+    <hr>
+   
+    
+    <div id = "chisquared" >
+      <p>Enter expected and observed values for chi-squared test <img src="https://drive.google.com/thumbnail?id=1Q9xYmpBi8IWNNuqCxu3gXKdRNbyMTj6z" width= 15px onclick="togglePopup_chisquare1()"></p>
+
+      <table id="ChiSquaredTable">
+        <tr>
+        <th>  </th><th>Expected </th> <th> Observed </th> </tr>
+        <tr>
+          <th>Pigmented</th>
+          <td><input type= "number" id = "exp1"></td>
+          <td><input type= "number" id = "pred1"></td>
+        </tr>
+        <tr>
+           <th>Not Pigmented</th>
+          <td><input type= "number" id = "exp2"></td>
+          <td><input type= "number" id = "pred2"></td>
+        </tr>
+      </table>
+      <br> 
+      
+      <input type = "button" id="calc1" onclick="chiSquared(1)" value = "Calculate">
+      
+      <p id="demo"></p>
+
+      <input type = "button" id= "sum1" value = "Proceed to Summary" onclick="startsingle(5)">
+    </div>
+
+
+</div>
+
+<div id = "sum1page" class="maindiv">
+    
+    <h2>Selected Cross</h2>
+
+    <figure id= "crossF">
+      <img src="https://drive.google.com/thumbnail?id=1wgeWWuugMz5RYGXQdm313MFfz54uu7Je" width = 250px>
+      <figcaption id="crossF_cap" >mitfa +/?</figcaption>
+  </figure>
+  <img id = "cross" src="https://drive.google.com/thumbnail?id=1k7iJYOXwe1eq9ViRAIgE90CWvAmhLRcw" width = 50px>  
+  
+  <figure id= "crossM">
+    <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
+    <figcaption id="crossM_cap">mitfa -/-</figcaption>
+</figure>
+   
+<div id="summarydiv2">
+<hr>
+<h2>Phenotyping Results</h2>
+ <table id="phenores1">
+  <tr>
+  <th>Pigmented </th> <th> Not Pigmented</th> </tr>
+  <tr>          
+    <td>Pigmented</td>
+    <td>Not Pigmented</td>
+  </tr>
+</table>
+
+  <p id="demo_b"></p>
+  
+  <hr>
+
+  <h2>Select the predicted genotype of the fish</h2>
+    
+  <select size="1" id="EnterPredGenType">
+    <option value="wt" selected="selected">
+        mitfa +/+
+    </option>
+    <option value="het">
+        mitfa -/+
+    </option>    
+</select>
+
+<input type ="button" value = "Submit" id = "CheckGentypeID" onclick="CheckGentype()">
+<input type ="button" value = "Proceed to Dihybrit Cross " id = "Double" onclick="startsingle(6)">
+
+</div>
+</div>
+
+<div id="dihybrit1" class="maindiv">
+    <h2> Introdction to roy and mitfa and casper</h2>
+    We have roy -/- and mitfa -/- fish and we want casper fish at the end.
+    <input type ="button" value = "Start" id = "dihybritBreed1" onclick="startsingle(7)">
+</div>
+
+<div id="dihybrit2" class="maindiv">
+<div>
+   <figure id= "crossF">
+    <img src="https://drive.google.com/thumbnail?id=1wgeWWuugMz5RYGXQdm313MFfz54uu7Je" width = 250px>
+    <figcaption id="crossF_cap" >roy -/-</figcaption>
+</figure>
+<img id = "cross" src="https://drive.google.com/thumbnail?id=1k7iJYOXwe1eq9ViRAIgE90CWvAmhLRcw" width = 50px>  
+
+<figure id= "crossM">
+  <img src="https://drive.google.com/thumbnail?id=1iSOMy0FwM1lynqOZeBac1i8U48s0TMv2" width = 250px>
+  <figcaption id="crossM_cap">mitfa -/-</figcaption>
+</figure> 
+</div>
+
+<div>
+ <input type ="button" value = "Set up breeding" id = "dihybritBreed1" onclick="startsingle(8)"> 
+</div>
+
+</div>
+
+<div id="dihybrit3" class="maindiv">
+  We got 100 embryos all with roy +/- mitfa +/- genotype and wildtype phenotype.
+  <br>
+  <img src="https://drive.google.com/uc?id=11C9IZKwW58vMzDkTkHZ1t36r-Uyb0xe7" width = "50%">   
+  <br>
+  We grow them for 6 months until they become mature.
+  We then inbred those fish to obtain roy -/- mitfa -/- fish.
+  <input type ="button" value = "Set up breeding" id = "dihybritBreed2" onclick="startsingle(9)">
+</div>
+
+<div id="dihybrit4" > 
+  Fill the punnett table to calculate the ratio of casper embryos
+  <br>
+  <br>
+    <table id="punnettable2">
+      <tr>
+        <td colspan = "2" rowspan="2"></td>
+        <th colspan="4"> roy +/- mitfa +/-</th>
+      </tr>
+      <tr> 
+        <th>roy + mitfa + </th>
+        <th>roy + mitfa - </th>
+        <th>roy - mitfa + </th>
+        <th>roy - mitfa - </th>
+      </tr>
+      <tr>
+        <th rowspan="4"> roy +/- mitfa +/-</th>
+        <th>roy + mitfa + </th>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+      </tr>
+      <tr>
+        <th>roy + mitfa - </th>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+      </tr>
+      <tr>
+        <th>roy - mitfa + </th>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+      </tr>
+      <tr>
+        <th>roy - mitfa - </th>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    Enter expected phenotype ratio (i.e 0.25):
+    <br>
+  <br>
+    <table id="punnettable3">
+      <tr>
+          <th></th>
+        <th>AB</th>
+        <th>nacre</th>
+        <th>roy</th>
+        <th>casper</th>
+      </tr>
+      <tr>  
+      <th>Expected Ratio</th>    
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+        <td><input type = "text"></td>
+      </tr>
+    </table>
+  
+  </div>
+  
+
+
+<script  src= "pigmentation.js"></script>
+
+</body>
+</html>
